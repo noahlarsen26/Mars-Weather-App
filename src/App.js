@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./components/Header";
+import Weather from "./components/Weather";
+import { useState, useEffect } from "react";
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedData, setLoadedData] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+
+    fetch(
+      "https://mars.nasa.gov/rss/api/?feed=weather&category=insight_temperature&feedtype=json&ver=1.0"
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        const sols = [];
+
+        for (const key in data) {
+          const sol = {
+            id: key,
+            ...data[key],
+          };
+          sols.push(sol);
+          sols.splice(7, 2);
+        }
+        setIsLoading(false);
+        setLoadedData(sols);
+      });
+  }, []);
+
+  if (isLoading) {
+    return (
+      <section>
+        <p>Loading...</p>
+      </section>
+    );
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-img">
+      <Header sols={loadedData}></Header>
+      <Weather sols={loadedData}></Weather>
     </div>
   );
 }
