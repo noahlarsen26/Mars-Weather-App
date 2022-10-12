@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import FahrenheitBtn from "./FahrenheitBtn";
-import CelsiusBtn from "./CelsiusBtn";
+import FahrenheitBtn from "./buttons/FahrenheitBtn";
+import CelsiusBtn from "./buttons/CelsiusBtn";
 
 export const ScaleContext = React.createContext();
 

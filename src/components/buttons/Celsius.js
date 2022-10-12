@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { TempContext } from "./DailyWeather";
+import { TempContext } from "../DailyWeather";
 
-function Fahrenheit(props) {
+function Celsius(props) {
   const scaleTemp = useContext(TempContext);
   const disabled = useContext(TempContext);
-  const temperature = scaleTemp ? "active" : "disabled";
-  const disableToggle = disabled ? "disabled" : "";
+  const temperature = scaleTemp ? "disabled" : "active";
+  const disableToggle = disabled ? "" : "disabled";
 
   return (
     <button
@@ -14,8 +14,9 @@ function Fahrenheit(props) {
       onClick={props.click}
       data-status={temperature}
     >
-      F
+      C
     </button>
   );
 }
-export default Fahrenheit;
+
+export default Celsius;

@@ -1,21 +1,20 @@
 import React, { useContext } from "react";
-import { ScaleContext } from "./TempScale";
+import { ScaleContext } from "../TempScale";
 
-function CelsiusBtn(props) {
+function FahrenheitBtn(props) {
   const tempScale = useContext(ScaleContext);
   const isDisabled = useContext(ScaleContext);
-  const scaleToggle = tempScale ? "disabled" : "active";
-  const disableToggle = isDisabled ? "" : "disabled";
+  const scaleToggle = tempScale ? "active" : "disabled";
+  const disableToggle = isDisabled ? "disabled" : "";
   return (
     <button
       disabled={disableToggle}
       onClick={props.click}
       data-status={scaleToggle}
-      className="celsius btn"
+      className="btn"
     >
-      C
+      F
     </button>
   );
 }
-
-export default CelsiusBtn;
+export default FahrenheitBtn;

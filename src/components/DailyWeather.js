@@ -1,6 +1,6 @@
 import React from "react";
-import Fahrenheit from "./Fahrenheit";
-import Celsius from "./Celsius";
+import Fahrenheit from "./buttons/Fahrenheit";
+import Celsius from "./buttons/Celsius";
 import { useState } from "react";
 
 export const TempContext = React.createContext();
@@ -29,20 +29,20 @@ function DailyWeather(props) {
     <TempContext.Provider value={(scaleTemp, disabled)}>
       <li className="weather">
         <div>
-          <h4 className="sol">sol {props.sol}</h4>
+          <h4>sol {props.sol}</h4>
         </div>
         <div>
-          <h5 className="date">{props.date}</h5>
+          <h5>{props.date}</h5>
         </div>
         <div className="underline"></div>
         <div>
-          <h5 className="high">high {highTemperature.toFixed(0)}°</h5>
+          <h5>high {highTemperature.toFixed(0)}°</h5>
           <Fahrenheit click={changeFahrTemp}></Fahrenheit>
           <span>|</span>
           <Celsius click={changeTemp}></Celsius>
         </div>
         <div>
-          <h5 className="low">low {lowTemperature.toFixed(0)}°</h5>
+          <h5>low {lowTemperature.toFixed(0)}°</h5>
           <Fahrenheit click={changeFahrTemp}></Fahrenheit>
           <span>|</span>
           <Celsius click={changeTemp}></Celsius>
