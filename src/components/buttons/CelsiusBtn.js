@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
-import { ScaleContext } from "../TempScale";
+import { TempScaleContext } from "../TempScale";
 
 function CelsiusBtn(props) {
-  const tempScale = useContext(ScaleContext);
-  const isDisabled = useContext(ScaleContext);
+  const tempScale = useContext(TempScaleContext);
+  const isDisabled = useContext(TempScaleContext);
+
+  // disable button when the other is active
   const scaleToggle = tempScale ? "disabled" : "active";
   const disableToggle = isDisabled ? "" : "disabled";
   return (

@@ -91,11 +91,13 @@ ul {
 .bg-img {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../image/mars.jpg) center/cover no-repeat;
   min-height: 100vh;
+  display: block;
+  position: relative;
+  padding-bottom: 0.25rem;
+  overflow-y: hidden;
 }
 
-.mars {
-  /* border: solid 1px red; */
-  /* margin-left: 5rem; */
+.mars-header {
   margin: 0 auto;
   max-width: 100%;
   min-height: 70vh;
@@ -103,37 +105,40 @@ ul {
   flex-direction: column;
   justify-content: space-around;
 }
-.mars .header-cont {
+.mars-header .header-cont {
   width: 45%;
   margin: 0 auto;
 }
-.mars .hero-weather-cont {
+.mars-header .hero-weather-cont {
   margin: 0 auto;
   width: 700px;
 }
-.mars .hero-weather-cont .current {
+.mars-header .hero-weather-cont .current {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  /* margin: 0 auto; */
 }
-.mars .hero-weather-cont .current .current-date {
+.mars-header .hero-weather-cont .current .current-date {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   width: 100%;
 }
-.mars .hero-weather-cont .current .current-date h2 {
+.mars-header .hero-weather-cont .current .current-date h2 {
   font-weight: bold;
 }
-.mars .hero-weather-cont .current .current-temp {
-  /* align-items: center; */
+.mars-header .hero-weather-cont .current .current-temp {
   width: 100%;
 }
-.mars .hero-weather-cont .current .current-temp h2 {
-  display: inline-block;
+.mars-header .hero-weather-cont .current .current-temp .current-cont {
+  display: flex;
+  min-height: 50%;
+  align-items: center;
+  justify-content: center;
 }
-.mars .hero-weather-cont .current .current-temp span {
+.mars-header .hero-weather-cont .current .current-temp h2 {
+  margin-top: 1rem;
+}
+.mars-header .hero-weather-cont .current .current-temp span {
   color: #999999;
   font-size: 2rem;
 }
@@ -141,6 +146,7 @@ ul {
 .weather-cont {
   display: flex;
   justify-content: space-around;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 .weather-cont .weather {
@@ -164,6 +170,7 @@ ul {
   }
   .hero-weather-cont .current .current-date {
     align-items: center;
+    border: solid 1px red;
   }
   .hero-weather-cont .current .current-temp {
     align-items: center;

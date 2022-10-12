@@ -1,8 +1,10 @@
 import CurrentWeather from "./CurrentWeather";
 function Header(props) {
-  const lastElement = props.sols[props.sols.length - 1];
+  // get last value from sols array
+  const lastEl = props.sols[props.sols.length - 1];
+
   return (
-    <main className="mars">
+    <main className="mars-header">
       <article className="header-cont">
         <h1>latest weather from mars</h1>
         <p>
@@ -12,11 +14,12 @@ function Header(props) {
           natus laudantium soluta et! Atque consectetur quos ea facilis?
         </p>
       </article>
+      {/* render most recent weather */}
       <CurrentWeather
-        sol={lastElement.id}
-        date={lastElement.First_UTC?.split("T")[0] || "No data"}
-        high_temp={lastElement.AT?.mx || "No data"}
-        low_temp={lastElement.AT?.mn || "No data"}
+        sol={lastEl.id}
+        date={lastEl.First_UTC?.split("T")[0] || "No data"}
+        high_temp={lastEl.AT?.mx || "No data"}
+        low_temp={lastEl.AT?.mn || "No data"}
       ></CurrentWeather>
     </main>
   );

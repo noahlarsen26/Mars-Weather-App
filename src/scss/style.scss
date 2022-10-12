@@ -87,11 +87,13 @@ ul {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../image/mars.jpg) center/cover no-repeat;
   min-height: 100vh;
+  display: block;
+  position: relative;
+  padding-bottom: 0.25rem;
+  overflow-y: hidden;
 }
 
-.mars {
-  /* border: solid 1px red; */
-  /* margin-left: 5rem; */
+.mars-header {
   margin: 0 auto;
   max-width: 100%;
   min-height: 70vh;
@@ -111,25 +113,30 @@ ul {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      /* margin: 0 auto; */
 
       .current-date {
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
         width: 100%;
         h2 {
           font-weight: bold;
         }
       }
       .current-temp {
-        // display: flex;
-        // flex-direction: column;
-        /* align-items: center; */
         width: 100%;
+        // border: solid 1px red;
+
+        .current-cont {
+          display: flex;
+          min-height: 50%;
+          align-items: center;
+          justify-content: center;
+          // border: solid 1px blue;
+        }
 
         h2 {
-          display: inline-block;
+          // display: inline-block;
+          margin-top: 1rem;
         }
         span {
           color: $btn-inactive;
@@ -143,6 +150,7 @@ ul {
 .weather-cont {
   display: flex;
   justify-content: space-around;
+  gap: 1rem;
   flex-wrap: wrap;
 
   .weather {
@@ -167,6 +175,7 @@ ul {
 
       .current-date {
         align-items: center;
+        border: solid 1px red;
       }
       .current-temp {
         align-items: center;

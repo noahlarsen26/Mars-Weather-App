@@ -3,6 +3,7 @@ import DailyWeather from "./DailyWeather";
 function Weather(props) {
   return (
     <ul className="weather-cont">
+      {/* render weather for each sol */}
       {props.sols.map((sol) => (
         <DailyWeather
           key={sol.id}

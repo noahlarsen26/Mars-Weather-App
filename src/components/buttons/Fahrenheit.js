@@ -4,6 +4,8 @@ import { TempContext } from "../DailyWeather";
 function Fahrenheit(props) {
   const scaleTemp = useContext(TempContext);
   const disabled = useContext(TempContext);
+
+  // disable button when the other is active
   const temperature = scaleTemp ? "active" : "disabled";
   const disableToggle = disabled ? "disabled" : "";
 
