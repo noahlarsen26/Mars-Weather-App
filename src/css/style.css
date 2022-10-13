@@ -16,6 +16,7 @@ body {
 p {
   margin-bottom: 1.5rem;
   max-width: 40em;
+  font-size: 1.25rem;
 }
 
 h1,
@@ -60,7 +61,8 @@ span {
 }
 
 a {
-  text-decoration: none;
+  color: white;
+  word-wrap: break-word;
 }
 
 ul {
@@ -122,6 +124,8 @@ ul {
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: space-around;
+  min-height: 100%;
 }
 .mars-header .hero-weather-cont .current .current-date h2 {
   font-weight: bold;
@@ -170,7 +174,6 @@ ul {
   }
   .hero-weather-cont .current .current-date {
     align-items: center;
-    border: solid 1px red;
   }
   .hero-weather-cont .current .current-temp {
     align-items: center;

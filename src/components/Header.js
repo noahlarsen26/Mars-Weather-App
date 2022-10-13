@@ -8,10 +8,14 @@ function Header(props) {
       <article className="header-cont">
         <h1>latest weather from mars</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          facilis commodi blanditiis laborum tempora vel, aut tenetur corporis
-          nihil voluptatem reprehenderit voluptatum, nobis sit itaque quidem
-          natus laudantium soluta et! Atque consectetur quos ea facilis?
+          NASA's InSight Mars Lander is takes measurements on the surface of
+          Mars at Elysium Planitia, a flat, smooth plain near Mars' equator.
+          Please note that there are sometimes problems with the sensors on Mars
+          that result in missing data! Summaries of these data are available at{" "}
+          <a href="https://mars.nasa.gov/insight/weather/">
+            https://mars.nasa.gov/insight/weather/
+          </a>
+          .
         </p>
       </article>
       {/* render most recent weather */}
