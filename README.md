@@ -4,7 +4,7 @@ An application that takes weather data from the NASA InSight API and displays it
 
 ## Screenshot
 
-  ![ScreenShot](Screenshot(81))
+  ![ScreenShot](Screenshot(81).png)
 
 ## Installation and Setup Instructions
 
