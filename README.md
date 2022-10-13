@@ -4,7 +4,7 @@ An application that takes weather data from the NASA InSight API and displays it
 
 ## Screenshot
 
-  ![ScreenShot](Mars-Weather-App.png)
+  ![Mars-Weather-App](https://user-images.githubusercontent.com/97766663/195713981-77a3211a-d181-46c2-9843-ad35c73b1ece.png)
 
 ## Installation and Setup Instructions
 
