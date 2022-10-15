@@ -8,15 +8,15 @@ An application that takes weather data from the NASA InSight API and displays it
 
 ## Installation and Setup Instructions
 
-Clone down this repository. You will need node and npm installed globally on your machine.
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
 Installation:
 
-npm install
+`npm install`
 
 To Start Server:
 
-npm start
+`npm start`
 
 To Visit App:
 
