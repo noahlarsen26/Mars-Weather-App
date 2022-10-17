@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FahrenheitBtn from "./buttons/FahrenheitBtn";
 import CelsiusBtn from "./buttons/CelsiusBtn";
 
-export const TempScaleContext = React.createContext();
+// export const TempScaleContext = React.createContext();
 
 function TempScale(props) {
   // toggle between fahrenheit and celsius
@@ -28,20 +28,34 @@ function TempScale(props) {
 
   return (
     <div className="current-temp">
-      <TempScaleContext.Provider value={(tempScale, isDisabled)}>
-        <div className="current-cont">
-          <h2>high: {highTemperature.toFixed(0)}°</h2>
-          <FahrenheitBtn click={changeFahrTemp}></FahrenheitBtn>
-          <span>|</span>
-          <CelsiusBtn click={changeCelsTemp}></CelsiusBtn>
-        </div>
-        <div className="current-cont">
-          <h2>low: {lowTemperature.toFixed(0)}°</h2>
-          <FahrenheitBtn click={changeFahrTemp}></FahrenheitBtn>
-          <span>|</span>
-          <CelsiusBtn click={changeCelsTemp}></CelsiusBtn>
-        </div>
-      </TempScaleContext.Provider>
+      <div className="current-cont">
+        <h2>high: {highTemperature.toFixed(0)}°</h2>
+        <FahrenheitBtn
+          tempScale={tempScale}
+          isDisabled={isDisabled}
+          click={changeFahrTemp}
+        ></FahrenheitBtn>
+        <span>|</span>
+        <CelsiusBtn
+          tempScale={tempScale}
+          isDisabled={isDisabled}
+          click={changeCelsTemp}
+        ></CelsiusBtn>
+      </div>
+      <div className="current-cont">
+        <h2>low: {lowTemperature.toFixed(0)}°</h2>
+        <FahrenheitBtn
+          tempScale={tempScale}
+          isDisabled={isDisabled}
+          click={changeFahrTemp}
+        ></FahrenheitBtn>
+        <span>|</span>
+        <CelsiusBtn
+          tempScale={tempScale}
+          isDisabled={isDisabled}
+          click={changeCelsTemp}
+        ></CelsiusBtn>
+      </div>
     </div>
   );
 }
