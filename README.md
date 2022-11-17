@@ -1,6 +1,8 @@
 # Mars Weather App
 
-An application that takes weather data from the NASA InSight API and displays it on the webpage. The user is able to switch the temperature between Celsius and Fahrenheit, and it was built with Javascript, React, CSS, and SCSS.
+An application that takes weather data from the NASA InSight API and displays it on the webpage. 
+
+The user is able to switch the temperature between Celsius and Fahrenheit, and it was built with Javascript, React, CSS, and SCSS.
 
 ## Screenshot
 
@@ -22,10 +24,12 @@ To Visit App:
 
 localhost:3000/
 
-## Reflection
+## Contact
 
-This was a project that I built in order to help myself learn React and SCSS. Project goals included familiarizing myself with the basics of React and SCSS such as, Props and Hooks in React, and variables and nesting in SCSS. 
+If you would like to contact me you can reach me at [noahlarsen24@gmail.com](noahlarsen24@gmail.com).
 
-I originally set out to build an application similar to a weather app for earth displaying information such as sunny/cloudy, humidity, etc., but the API didn't have that information so I opted to only show the air temperature in Celsius and Fahrenheit. 
+## License
 
-One of the main challenges I ran into was 
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+
